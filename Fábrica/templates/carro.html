@@ -1,0 +1,15 @@
+{% extends "template.html" %}
+{% block conteudo %}
+    <div class = "row">
+        <p class="h4">Marca: {{ carro.marca }}</p>
+        <p class="h4">Modelo: {{ carro.modelo }}</p>
+        <p class="h4">Cor: {{ carro.cor }}</p>
+        <p class="h4">Combustível: {{ carro.combustivel }}</p>
+        <p class="h4">Ano: {{ carro.ano }}</p>
+    </div>
+    <div class="col-4">
+        <figure class="figure">
+            <img src="{{ url_for('imagen', nome_arquivo=cap_carro) }}" class="figure-img img-fluid img-thumbnail" >
+        </figure>
+    </div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "template.html" %}
+{% block conteudo %}
+            <form method = "POST" action = "{{ url_for('atualizar') }}" enctype = "multipart/form-data">
+                <fieldset>
+                    <input type="hidden" name="id" value="{{ carro.id }}">
+                    <div class = "mb-3">
+                        <label for = "marca" class = "form-label">Marca</label>
+                        <input type = "text" id = "marca" name = "marca" class = "form-control" value="{{ carro.marca }}">
+                    </div>
+                    <div class = "mb-3">
+                        <label for = "modelo" class = "form-label">Modelo</label>
+                        <input type = "text" id = "modelo" name = "modelo" class = "form-control" value="{{ carro.modelo }}">
+                    </div>
+                    <div class = "mb-3">
+                        <label for = "cor" class = "form-label">Cor</label>
+                        <input type = "text" id = "cor" name = "cor" class = "form-control" value="{{ carro.cor }}">
+                    </div>
+                    <div class = "mb-3">
+                        <label for = "combustivel" class = "form-label">Combustível</label>
+                        <input type = "text" id = "combustivel" name = "combustivel" class = "form-control" value="{{ carro.combustivel }}">
+                    </div>
+                    <div class = "mb-3">
+                        <label for = "ano" class = "form-label">Ano</label>
+                        <input type = "text" id = "ano" name = "ano" class = "form-control" value="{{ carro.ano }}">
+                    </div>
+                    <div class = "mb-3">
+                        <label for = "arquivo" class = "form-label">Carro</label>
+                        <input type = "file" id = "arquivo" name = "arquivo" class = "form-control">
+                    </div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type = "submit" class = "btn btn-primary btn-salvar">Salvar</button>
+                    </div>
+                </fieldset>
+            </form>
+{% endblock %}
